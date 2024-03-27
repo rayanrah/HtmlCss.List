@@ -1,21 +1,32 @@
 
-
-li {
-font-size: 14px;
-line-height: 22px;
-color: black;
-font-family: Arial, Helvetica, sans-serif;
-}
-
-/*----How to define a counter---*/
-
-/* 1. Define a counter */
+/* Define or Create a counter*/
 body {
-    counter-reset: kapital;
+    counter-reset: head sub subsub;
 }
 
-/* 2. Increment the counter for each kapital */
-h2::before {
-    counter-increment: kapital;
-    content: "KAPITEL" counter(kapital) ". ";
+/* Display the counter for each kapital */
+h2.head::before {
+    counter-increment: head;
+    content: "KAPITEL " counter(head) ". ";
+}
+
+/* Reset the sub and subsub counters for each h2.head */
+h2.head {
+    counter-reset: sub subsub;
+}
+
+.sub::before {
+    counter-increment: sub;
+    content: counter(head) "." counter(sub) " ";
+    font-size: 15px;
+    line-height: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.subsub::before {
+    counter-increment: subsub;
+    content: counter(head) "." counter(sub) "." counter(subsub) ". ";
+    font-size: 15px;
+    line-height: 22px;
+    font-family: Arial, Helvetica, sans-serif;
 }
