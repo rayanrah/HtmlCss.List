@@ -1,0 +1,14 @@
+p {
+-webkit-text-size-adjust: 100%;
+--rem: 16;
+pointer-events: all;
+word-break: break-word;
+box-sizing: inherit;
+font-weight: 400;
+letter-spacing: .4px;
+margin: 0cm;
+line-height: 12.0pt;
+font-size: 12px;
+font-family: Nunito;
+color: black;
+}
